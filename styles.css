@@ -1,0 +1,25 @@
+/* Estilos para el título principal */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilos para los elementos de la tienda */
+.item {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.item img {
+    max-width: 150px;
+}
+
+/* Estilos para el fondo de la página */
+body {
+    background-color: #54e2e7;
+    margin: 0;
+    padding: 0;
+}
