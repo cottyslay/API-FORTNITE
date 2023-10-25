@@ -1,0 +1,48 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #54e2e7;
+
+}
+
+/* Estilos para el contenedor de la galería */
+#bannerGallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Estilos para la imagen de banner */
+#bannerImage {
+    max-width: 400px;
+    min-width: 200px;
+    border: 2px solid #000;
+    margin: 10px;
+}
+
+/* Estilos para el contenedor de botones */
+#buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos para los botones */
+.gallery-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Modificar el tamaño de los botones */
+    cursor: pointer;
+    border-radius: 10px; /* Aumentar el radio de borde para hacer los botones más redondos */
+    margin: 10px; /* Añadir un margen entre los botones */
+}
+
+.gallery-button:hover {
+    background-color: #0056b3;
+}
