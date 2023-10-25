@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fortnite Map</title>
+</head>
+<body>
+    <h1>Fortnite Map</h1>
+    <div id="mapImageContainer">
+        <img id="mapImage" src="" alt="Fortnite Map">
+    </div>
+
+    <script>
+        // Hacer una solicitud a la API de Fortnite
+        fetch('https://fortnite-api.com/v1/map')
+            .then(response => response.json())
+            .then(data => {
+                // Obtener la URL de la imagen del mapa
+                const mapImageUrl = data.data.images.blank;
+                const mapImageElement = document.getElementById('mapImage');
+                mapImageElement.src = mapImageUrl;
+            })
+            .catch(error => {
+                console.error('Error al obtener datos de la API', error);
+            });
+    </script>
+</body>
+</html>

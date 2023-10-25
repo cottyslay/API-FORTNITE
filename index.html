@@ -1,55 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tienda de Fortnite</title>
-    <style>
-        .item {
-            display: inline-block;
-            margin: 10px;
-        }
-        .item img {
-            max-width: 150px;
-        }
-    </style>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-
+    <title>Consulta de Código de Creador de Fortnite</title>
 </head>
 <body>
-    <h1>Tienda de Fortnite</h1>
-    <div id="fortnite-shop">
-        <!-- Aquí se mostrarán las imágenes y nombres de los artículos -->
+    <h1>Consulta de Código de Creador de Fortnite</h1>
+
+    <label for="creatorCode">Código de Creador de Fortnite:</label>
+    <input type="text" id="creatorCode" placeholder="Ingresa un código de creador">
+    <button onclick="consultarCreadorCode()">Consultar</button>
+
+    <div id="result">
+        <!-- Aquí se mostrará la información del código de creador -->
     </div>
 
     <script>
-        const apiUrl = 'https://fortnite-api.com/v2/shop/br';
+        function consultarCreadorCode() {
+            const creatorCode = document.getElementById("creatorCode").value;
+            if (!creatorCode) {
+                alert("Por favor, ingresa un código de creador.");
+                return;
+            }
 
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                const shopData = data.data;
-
-                if (shopData) {
-                    const shopElement = document.getElementById('fortnite-shop');
-                    shopData.featured.entries.forEach(item => {
-                        const itemElement = document.createElement('div');
-                        itemElement.className = 'item';
-                        const itemName = document.createElement('p');
-                        itemName.textContent = item.items[0].name;
-                        const itemImage = document.createElement('img');
-                        itemImage.src = item.items[0].images.icon;
-                        
-                        itemElement.appendChild(itemName);
-                        itemElement.appendChild(itemImage);
-                        shopElement.appendChild(itemElement);
-                    });
-                } else {
-                    console.error('No se encontraron datos de la tienda.');
-                }
-            })
-            .catch(error => {
-                console.error('Error al obtener los datos de la API', error);
-            });
+            // Realizar una solicitud a la API de códigos de creador de Fortnite
+            const apiUrl = `https://fortnite-api.com/v2/creatorcode?name=${creatorCode}`;
+            
+            // Puedes usar fetch para realizar la solicitud
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // Aquí debes procesar los datos y mostrar la información en la página
+                    document.getElementById("result").innerHTML = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error("Error al consultar el código de creador:", error);
+                    alert("No se pudieron obtener los datos del código de creador.");
+                });
+        }
     </script>
 </body>
 </html>
-
