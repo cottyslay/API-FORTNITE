@@ -12,6 +12,7 @@
     min-width: 200px;
     border: 2px solid #000;
     margin: 10px;
+    
 }
 
 /* Estilos para el contenedor de botones */
@@ -26,6 +27,7 @@
     cursor: pointer;
     border-radius: 10px; /* Aumentar el radio de borde para hacer los botones más redondos */
     margin: 10px; /* Añadir un margen entre los botones */
+    
 }
 
 .gallery-button:hover {
