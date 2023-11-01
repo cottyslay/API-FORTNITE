@@ -1,0 +1,12 @@
+/* Estilos para el contenedor del mapa */
+#mapImageContainer {
+    max-width: 70%; /* Ajusta el ancho máximo a tu preferencia */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+   
+}
+
+/* Estilos para la imagen del mapa */
+#mapImage {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: 1200px;
+}

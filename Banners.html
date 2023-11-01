@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="fondo.css">
     <link rel="stylesheet" type="text/css" href="banner.css">
     <title>Galería de Banners de Fortnite</title>
 </head>
 <body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img style=" height: 80px;" src="logo.png" > <!-- Reemplaza 'logo.png' con la ruta de tu logotipo -->
+            </div>
+            <ul>
+                <li><a href="Mapa.html">Mapa</a></li>
+                <li><a href="#">Banner del dia</a></li>
+                <li><a href="tienda.html">Item Shop</a></li>
+                <li><a href="index.html">Codigo de Creador</a></li>
+            </ul>
+        </div>
+    </nav>
     <div id="bannerGallery">
         <img id="bannerImage" src="" alt="Banner de Fortnite">
         <div id="buttonContainer">
-            <button id="previousButton" class="gallery-button">Anterior</button>
-            <button id="nextButton" class="gallery-button">Siguiente</button>
+            <button id="randomButton" class="gallery-button">Genera un Banner Aleatorio</button>
         </div>
     </div>
     <script src="banner.js"></script>

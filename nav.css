@@ -1,0 +1,48 @@
+/* Estilo base para el navbar */
+
+/* Estilo base para el navbar */
+.navbar {
+    background: #0086C8;
+    padding: 10px 0;
+    display: flex; /* Utilizamos flexbox para alinear elementos horizontalmente */
+    justify-content: space-between; /* Espacio entre el logotipo y los enlaces */
+    align-items: center; /* Alinea verticalmente el contenido */
+    border-bottom: 2px solid #4CE4F9;
+  
+}
+
+/* Estilo para la lista de elementos del navbar */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para los elementos de la lista */
+.navbar li {
+    display: inline;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+
+
+
+/* Estilo para los enlaces dentro de los elementos de la lista */
+.navbar a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 15px;
+    transition: color 0.3s;
+
+}
+
+/* Cambio de color y fondo al pasar el cursor sobre los enlaces */
+.navbar a:hover {
+    color: #4CE4F9;
+    background: #0298E2;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+

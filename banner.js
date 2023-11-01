@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     var apiURL = "https://fortnite-api.com/v1/banners";
     var bannersElement = document.getElementById("bannerImage");
-    var previousButton = document.getElementById("previousButton");
-    var nextButton = document.getElementById("nextButton");
+    var randomButton = document.getElementById("randomButton");
 
     var banners = [];
-    var currentIndex = 0;
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", apiURL, true);
@@ -14,19 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
             banners = data.data;
-            displayBanner(currentIndex);
 
-            previousButton.addEventListener("click", function () {
-                currentIndex = (currentIndex - 1 + banners.length) % banners.length;
-                displayBanner(currentIndex);
-            });
-
-            nextButton.addEventListener("click", function () {
-                currentIndex = (currentIndex + 1) % banners.length;
-                displayBanner(currentIndex);
+            randomButton.addEventListener("click", function () {
+                var randomIndex = Math.floor(Math.random() * banners.length);
+                displayBanner(randomIndex);
             });
         } else {
-            bannersElement.innerHTML = "Error al obtener los datos. Código de estado: " + xhr.status;
+            bannersElement.innerHTML = "Error al obtener los datos. CÃ³digo de estado: " + xhr.status;
         }
     };
 

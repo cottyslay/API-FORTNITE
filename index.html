@@ -1,42 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title>Consulta de Código de Creador de Fortnite</title>
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Consulta de Código de Creador de Fortnite</h1>
-
-    <label for="creatorCode">Código de Creador de Fortnite:</label>
-    <input type="text" id="creatorCode" placeholder="Ingresa un código de creador">
-    <button onclick="consultarCreadorCode()">Consultar</button>
-
-    <div id="result">
-        <!-- Aquí se mostrará la información del código de creador -->
-    </div>
-
-    <script>
-        function consultarCreadorCode() {
-            const creatorCode = document.getElementById("creatorCode").value;
-            if (!creatorCode) {
-                alert("Por favor, ingresa un código de creador.");
-                return;
-            }
-
-            // Realizar una solicitud a la API de códigos de creador de Fortnite
-            const apiUrl = `https://fortnite-api.com/v2/creatorcode?name=${creatorCode}`;
-            
-            // Puedes usar fetch para realizar la solicitud
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    // Aquí debes procesar los datos y mostrar la información en la página
-                    document.getElementById("result").innerHTML = JSON.stringify(data, null, 2);
-                })
-                .catch(error => {
-                    console.error("Error al consultar el código de creador:", error);
-                    alert("No se pudieron obtener los datos del código de creador.");
-                });
-        }
-    </script>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img style=" height: 80px;" src="logo.png" > <!-- Reemplaza 'logo.png' con la ruta de tu logotipo -->
+            </div>
+            <ul>
+                <li><a href="Mapa.html">Mapa</a></li>
+                <li><a href="Banners.html">Banner del dia</a></li>
+                <li><a href="tienda.html">Item Shop</a></li>
+                <li><a href="#">Codigo de Creador</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1 style="text-align: center; font-size: 50px; color: rgb(255, 255, 255);" >Chigua And bugha te best's players in the World</h1>
 </body>
 </html>
