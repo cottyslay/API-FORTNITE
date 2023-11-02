@@ -2,7 +2,7 @@
 
 /* Estilo base para el navbar */
 .navbar {
-    background: #0086C8;
+    background: #bbe3f7;
     padding: 10px 0;
     display: flex; /* Utilizamos flexbox para alinear elementos horizontalmente */
     justify-content: space-between; /* Espacio entre el logotipo y los enlaces */
@@ -31,7 +31,7 @@
 /* Estilo para los enlaces dentro de los elementos de la lista */
 .navbar a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: rgb(12, 151, 231);
     font-weight: bold;
     margin-right: 15px;
     transition: color 0.3s;

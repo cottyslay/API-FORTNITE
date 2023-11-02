@@ -8,6 +8,7 @@
     background-image: url(fondo.PNG);
     background-repeat:repeat;    
     background-size: var(--BackgroundSize);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     animation: movingBackground 25s linear infinite;
  }
